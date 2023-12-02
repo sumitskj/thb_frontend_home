@@ -12,6 +12,8 @@ const RevenueEstimator = () => {
   const [isValidProjectUrl, setIsValidProjectUrl] = useState(false);
   const [abv, setAbv] = useState(0);
   const [country, setCountry] = useState("");
+  const [revenue, setRenveue] = useState(0);
+  const [months, setMonths] = useState(83);
 
   const updateProjectWebisteUrl = (event) => {
     setProjectWebsiteUrl(event.target.value);
@@ -46,7 +48,7 @@ const RevenueEstimator = () => {
     "& .MuiSlider-rail": {
       height: 8,
       borderRadius: 4,
-      color: 'gray'
+      color: "gray",
     },
   });
 
@@ -85,8 +87,28 @@ const RevenueEstimator = () => {
     return `${value} months`;
   }
 
+  const calculateRevenue = (m, a) => {
+    console.log(m);
+    if (m === 16.6) {
+      setRenveue(0);
+    }
+    if (m === 33.2) {
+      setRenveue(a * 3 * 100);
+    }
+    if (m === 49.8) {
+      setRenveue(a * 6 * 100);
+    }
+    if (m === 66.4) {
+      setRenveue(a * 9 * 100);
+    }
+    if (m === 83) {
+      setRenveue(a * 12 * 100);
+    }
+  };
+
   return (
-    <div id="revenue-estimator"
+    <div
+      id="revenue-estimator"
       className="flex flex-col justify-start items-start w-full relative mt-36 gap-12"
       style={{ backgroundColor: "#F6F6F4" }}
     >
@@ -135,7 +157,12 @@ const RevenueEstimator = () => {
             </select>
             <input
               value={abv}
-              onChange={(event) => setAbv(event.target.value)}
+              onChange={(event) => {
+                if (Number(event.target.value)) {
+                  setAbv(event.target.value);
+                  calculateRevenue(months, event.target.value);
+                }
+              }}
               type="number"
               className="resize border px-3 py-2 w-full rounded-tr-2xl rounded-br-2xl"
             ></input>
@@ -150,20 +177,25 @@ const RevenueEstimator = () => {
           <div className="w-full relative">
             <CustomSlider
               aria-label="Custom marks"
-              defaultValue={100}
+              // defaultValue={100}
               getAriaValueText={valuetext}
               step={null}
               valueLabelDisplay="auto"
               marks={sliderMarks}
               min={10}
               max={90}
+              value={months}
               sx={{ width: "500px", height: "6px" }}
+              onChange={(event) => {
+                setMonths(event.target.value);
+                calculateRevenue(event.target.value, abv);
+              }}
             />
           </div>
         </div>
         <div className="flex flex-col justify-start item-center relative bg-yellow-400 px-6 py-4 rounded-lg">
           <div className="text-sm font-semibold">Revenue:</div>
-          <div className="text-xl font-bold">$200000</div>
+          <div className="text-xl font-bold">${revenue}</div>
         </div>
       </div>
       <div className="flex justify-center items-center relative w-full pb-10">

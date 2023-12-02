@@ -23,7 +23,7 @@ const Home = () => {
           </div>
           <div className="flex justify-end items-center gap-4 xl:gap-10">
             <div className="hidden lg:block font-medium text-sm md:text-base cursor-pointer hover:border-b-2">
-              <a href="https://thb-frontend.azurewebsites.net/signup">
+              <a href="https://thb-frontend.azurewebsites.net/login">
                 Try for Free
               </a>
             </div>
