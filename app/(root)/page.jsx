@@ -13,7 +13,7 @@ const Home = () => {
     <main className="font-manrope">
       <div className="flex flex-col w-full relative">
         <MainHeader />
-        <div className="grid grid-cols-1 lg:grid-cols-2 px-6 md:px-16 lg:px-20 mt-40 lg:mt-40 items-start gap-2">
+        <div className="grid grid-cols-1 lg:grid-cols-2 px-6 md:px-16 lg:px-20 mt-24 lg:mt-40 items-start gap-2">
           <div className="flex flex-col justify-start items-start pt-10 gap-12">
             <div className="flex flex-col justify-start items-start gap-6">
               <div className="text-center lg:text-left text-3xl md:text-4xl lg:text-5xl font-semibold font-manrope">
@@ -46,10 +46,10 @@ const Home = () => {
             />
           </div>
           <div className="flex lg:hidden justify-center xl:justify-start items-center w-full relative gap-10 xl:gap-16 mt-4 xl:mt-0">
-            <button className="px-4 xl:px-6 py-2 rounded-3xl border text-sm md:text-base xl:text-xl border-black bg-white hover:bg-gray-100">
+            <button className="px-4 xl:px-6 py-2 rounded-3xl border text-lg xl:text-xl border-black bg-white hover:bg-gray-100">
               Book a Call
             </button>
-            <button className="px-4 xl:px-6 py-2 rounded-3xl border text-sm md:text-base xl:text-xl border-black bg-thbYellow hover:bg-thbDarkYellow">
+            <button className="px-4 xl:px-6 py-2 rounded-3xl border text-lg xl:text-xl border-black bg-thbYellow hover:bg-thbDarkYellow">
               <a href="https://app.thehyperbrand.com/signup">Get Started</a>
             </button>
           </div>
