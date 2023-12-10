@@ -199,7 +199,7 @@ const RevenueEstimator = () => {
       </div>
       <div className="flex justify-center items-center relative w-full pb-10">
         <button className="bg-neutral-100 px-4 py-2 rounded-3xl border border-black">
-          <a href="https://thb-frontend.azurewebsites.net/signup">
+          <a href="https://app.thehyperbrand.com/signup">
             Learn More <ArrowRightAltIcon />
           </a>
         </button>

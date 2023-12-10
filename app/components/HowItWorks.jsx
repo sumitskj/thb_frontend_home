@@ -131,7 +131,7 @@ const HowItWorks = () => {
               Discover personalized topic recommendations for your business
             </div>
             <button className="bg-neutral-100 px-4 py-2 rounded-3xl border border-black">
-              <a href="https://thb-frontend.azurewebsites.net/signup">
+              <a href="https://app.thehyperbrand.com/signup">
                 Get Started <ArrowRightAltIcon />
               </a>
             </button>

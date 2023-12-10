@@ -96,7 +96,7 @@ const PricingCard = ({ pricing }) => {
       </ul>
       <div className="px-6 pt-4 pb-6">
         <button className="bg-yellow-400 hover:bg-yellow-500 py-2 px-4 rounded-full w-full font-medium">
-          <a href="https://thb-frontend.azurewebsites.net/signup">
+          <a href="https://app.thehyperbrand.com/signup">
             Get Started
           </a>
         </button>

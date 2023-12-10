@@ -32,7 +32,7 @@ const Home = () => {
                 </a>
               </button>
               <button className="px-6 lg:px-8 py-2 rounded-3xl border text-sm md:text-base lg:text-xl font-light border-black bg-thbYellow hover:bg-thbDarkYellow">
-                <a href="https://thb-frontend.azurewebsites.net/signup">
+                <a href="https://app.thehyperbrand.com/signup">
                   Get Started
                 </a>
               </button>
@@ -51,7 +51,7 @@ const Home = () => {
               Book a Call
             </button>
             <button className="px-4 xl:px-6 py-2 rounded-3xl border text-sm md:text-base xl:text-xl border-black bg-thbYellow hover:bg-thbDarkYellow">
-              <a href="https://thb-frontend.azurewebsites.net/signup">
+              <a href="https://app.thehyperbrand.com/signup">
                 Get Started
               </a>
             </button>

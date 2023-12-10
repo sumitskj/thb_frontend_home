@@ -34,7 +34,7 @@ const MainHeader = () => {
         </div>
         <div className="flex justify-end items-center gap-4 xl:gap-10">
           <div className="hidden lg:block font-medium text-sm md:text-base cursor-pointer hover:border-b-2 border-thbYellow">
-            <a href="https://thb-frontend.azurewebsites.net/login">
+            <a href="https://app.thehyperbrand.com/login">
               Try for Free
             </a>
           </div>
@@ -59,7 +59,7 @@ const MainHeader = () => {
             </a>
           </button>
           <button className="px-4 py-2 text-sm md:text-base rounded-3xl border border-black bg-thbYellow hover:bg-thbDarkYellow">
-            <a href="https://thb-frontend.azurewebsites.net/signup">Sign Up</a>
+            <a href="https://app.thehyperbrand.com/signup">Sign Up</a>
           </button>
         </div>
       </div>
@@ -69,7 +69,7 @@ const MainHeader = () => {
         } bottom-0 flex justify-center items-center w-full px-6 py-2 bg-thbYellow z-10`}
       >
         <button className="px-4 py-2 text-sm md:text-base rounded-3xl border border-black bg-white hover:bg-thbYellow">
-          <a href="https://thb-frontend.azurewebsites.net/signup">
+          <a href="https://app.thehyperbrand.com/signup">
             Get a free Blog <ArrowRightAltIcon />
           </a>
         </button>
