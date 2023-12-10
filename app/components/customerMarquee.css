@@ -1,0 +1,19 @@
+.marquee {
+    width: 100%;
+    overflow: hidden;
+    background: #f0f0f0; /* Your desired background */
+    border: 1px solid #ddd; /* Optional border */
+  }
+  
+  .marquee-content {
+    display: inline-block;
+    white-space: nowrap;
+    padding-left: 100%;
+    animation: marquee 10s linear infinite; /* Adjust the timing to control the speed */
+  }
+  
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-100%); }
+  }
+  

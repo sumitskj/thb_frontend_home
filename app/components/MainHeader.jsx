@@ -5,9 +5,19 @@ import { useEffect, useState } from "react";
 const { default: Image } = require("next/image");
 const { default: Link } = require("next/link");
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
+import MenuIcon from "@mui/icons-material/Menu";
+import CloseIcon from "@mui/icons-material/Close";
+import {
+  Drawer,
+  List,
+  ListItem,
+  ListItemButton,
+  ListItemText,
+} from "@mui/material";
 
 const MainHeader = () => {
   const [top, setTop] = useState(true);
+  const [openMobileMenu, setOpenMobileMenu] = useState(false);
 
   useEffect(() => {
     const scrollHandler = () => {
@@ -17,6 +27,40 @@ const MainHeader = () => {
     return () => window.removeEventListener("scroll", scrollHandler);
   }, [top]);
 
+  const MobileMenuDrawer = ({ openMobileMenu, setOpenMobileMenu }) => {
+    return (
+      <Drawer
+        anchor="right"
+        open={openMobileMenu}
+        onClose={() => setOpenMobileMenu(false)}
+      >
+        <div className="mt-16 flex flex-col justify-start items-center w-full relative px-10 gap-8">
+          <div className="flex justify-end w-full relative">
+            <div onClick={() => setOpenMobileMenu(false)}>
+              <CloseIcon />
+            </div>
+          </div>
+          <button className="px-4 py-2 text-sm md:text-base rounded-3xl border border-black bg-white ">
+            <a
+              href="https://calendly.com/thehyperbrand/onboarding"
+              target="_blank"
+            >
+              Book a call
+            </a>
+          </button>
+          <button className="px-4 py-2 text-sm md:text-base rounded-3xl border border-black bg-thbYellow">
+            <a href="https://app.thehyperbrand.com/signup">Sign Up</a>
+          </button>
+          <div>Try for Free</div>
+          <div>Revenue Estimator</div>
+          <div>Pricing</div>
+          <div>How it works</div>
+          <div>Blogs</div>
+        </div>
+      </Drawer>
+    );
+  };
+
   return (
     <>
       <div
@@ -24,7 +68,7 @@ const MainHeader = () => {
           !top && `bg-white shadow-sm`
         }`}
       >
-        <div className="p-2">
+        <div className="hidden md:block p-2">
           <Image
             src="/images/THB.svg"
             alt="TheHyperbrand Logo"
@@ -32,11 +76,17 @@ const MainHeader = () => {
             height={40}
           />
         </div>
+        <div className="md:hidden p-2">
+          <Image
+            src="/images/THB.svg"
+            alt="TheHyperbrand Logo"
+            width={120}
+            height={30}
+          />
+        </div>
         <div className="flex justify-end items-center gap-4 xl:gap-10">
           <div className="hidden lg:block font-medium text-sm md:text-base cursor-pointer hover:border-b-2 border-thbYellow">
-            <a href="https://app.thehyperbrand.com/login">
-              Try for Free
-            </a>
+            <a href="https://app.thehyperbrand.com/login">Try for Free</a>
           </div>
           <div className="hidden lg:block font-medium text-sm md:text-base cursor-pointer hover:border-b-2 border-thbYellow">
             <Link href={"#revenue-estimator"}>Revenue Estimator</Link>
@@ -61,6 +111,16 @@ const MainHeader = () => {
           <button className="px-4 py-2 text-sm md:text-base rounded-3xl border border-black bg-thbYellow hover:bg-thbDarkYellow">
             <a href="https://app.thehyperbrand.com/signup">Sign Up</a>
           </button>
+          <div
+            onClick={() => setOpenMobileMenu(true)}
+            className="lg:hidden cursor-pointer"
+          >
+            <MenuIcon />
+          </div>
+          <MobileMenuDrawer
+            openMobileMenu={openMobileMenu}
+            setOpenMobileMenu={setOpenMobileMenu}
+          />
         </div>
       </div>
       <div

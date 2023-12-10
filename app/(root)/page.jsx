@@ -6,6 +6,7 @@ import HowItWorks from "../components/HowItWorks";
 import Pricing from "../components/Pricing";
 import Footer from "../components/Footer";
 import MainHeader from "../components/MainHeader";
+import Marquee from "react-fast-marquee";
 
 const Home = () => {
   return (
@@ -32,9 +33,7 @@ const Home = () => {
                 </a>
               </button>
               <button className="px-6 lg:px-8 py-2 rounded-3xl border text-sm md:text-base lg:text-xl font-light border-black bg-thbYellow hover:bg-thbDarkYellow">
-                <a href="https://app.thehyperbrand.com/signup">
-                  Get Started
-                </a>
+                <a href="https://app.thehyperbrand.com/signup">Get Started</a>
               </button>
             </div>
           </div>
@@ -51,9 +50,7 @@ const Home = () => {
               Book a Call
             </button>
             <button className="px-4 xl:px-6 py-2 rounded-3xl border text-sm md:text-base xl:text-xl border-black bg-thbYellow hover:bg-thbDarkYellow">
-              <a href="https://app.thehyperbrand.com/signup">
-                Get Started
-              </a>
+              <a href="https://app.thehyperbrand.com/signup">Get Started</a>
             </button>
           </div>
         </div>
@@ -61,31 +58,35 @@ const Home = () => {
         <div className="flex flex-col justify-start items-center w-full relative gap-4 mt-36">
           <div className="text-2xl font-medium">{`Trusted by the best`}</div>
           <div className="text-center text-gray-500">{`50+ Customer in over 10+ countries grow their business with TheHyperBrand`}</div>
-          <div className="flex justify-around items-center w-full relative px-60 mt-4">
-            <Image
-              src="/images/company-logos/eventbrite.svg"
-              width={100}
-              height={50}
-              alt="eventbrite company logo"
-            />
-            <Image
-              src="/images/company-logos/doordash.svg"
-              width={100}
-              height={50}
-              alt="doordash company logo"
-            />
-            <Image
-              src="/images/company-logos/reddit.svg"
-              width={100}
-              height={50}
-              alt="reddit company logo"
-            />
-            <Image
-              src="/images/company-logos/trello.svg"
-              width={100}
-              height={50}
-              alt="trello company logo"
-            />
+          <div className="flex w-full md:w-1/2 relative px-10">
+            <Marquee pauseOnHover={true}>
+              <div className="flex justify-center items-center w-full relative mt-4 px-10 gap-20">
+                <Image
+                  src="/images/company-logos/eventbrite.svg"
+                  width={100}
+                  height={50}
+                  alt="eventbrite company logo"
+                />
+                <Image
+                  src="/images/company-logos/doordash.svg"
+                  width={100}
+                  height={50}
+                  alt="doordash company logo"
+                />
+                <Image
+                  src="/images/company-logos/reddit.svg"
+                  width={100}
+                  height={50}
+                  alt="reddit company logo"
+                />
+                <Image
+                  src="/images/company-logos/trello.svg"
+                  width={100}
+                  height={50}
+                  alt="trello company logo"
+                />
+              </div>
+            </Marquee>
           </div>
         </div>
         <RevenueEstimator />
