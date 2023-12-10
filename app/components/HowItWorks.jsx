@@ -2,20 +2,30 @@
 import Image from "next/image";
 import { useState } from "react";
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
+import {
+  Accordion,
+  AccordionDetails,
+  AccordionSummary,
+  Box,
+} from "@mui/material";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 const HowItWorks = () => {
   const [curView, setCurView] = useState(0);
 
   return (
-    <div id="how-it-works" className="flex flex-col relative w-full justify-start items-center gap-6 mt-32">
-      <div className="text-2xl flex justify-center items-start w-full relative pt-10">
+    <div
+      id="how-it-works"
+      className="flex flex-col relative w-full justify-start items-center gap-6 mt-16 lg:mt-32"
+    >
+      <div className="text-2xl flex justify-center items-start w-full relative pt-10 font-medium">
         How it works?
       </div>
-      <div className="text-center text-gray-600">
+      <div className="text-center text-gray-600 px-6">
         Grow your business with AI-powered content that ranks.
       </div>
-      <div className="flex justify-around items-start w-full relative">
-        <div className="flex flex-col justify-center items-center w-full relative gap-6 py-10">
+      <div className="hidden md:flex justify-around items-start relative sm:gap-10 lg:gap-20 px-10">
+        <div className="flex flex-col justify-center items-start w-full relative gap-6 py-10">
           <div
             onClick={() => setCurView(0)}
             className={`${
@@ -53,57 +63,171 @@ const HowItWorks = () => {
         </div>
         <div className="flex flex-col justify-start items-start w-full relative gap-4">
           {curView === 0 && (
-            <div className="w-3/4">
+            <Box
+              sx={{
+                width: { sm: "356px", lg: "512px" },
+                height: { sm: "200px", lg: "300px" },
+                position: "relative",
+              }}
+            >
               <Image
                 src="/images/how-it-works/img1.svg"
-                layout="responsive"
-                width={100}
-                height={200}
-                alt="why thehyperbrand reason2"
+                fill
+                style={{ objectFit: "contain" }}
+                alt="why thehyperbrand reason1"
               />
-            </div>
+            </Box>
           )}
           {curView === 1 && (
-            <div className="w-3/4">
+            <Box
+              sx={{
+                width: { sm: "356px", lg: "512px" },
+                height: { sm: "200px", lg: "300px" },
+                position: "relative",
+              }}
+            >
               <Image
                 src="/images/how-it-works/img1.svg"
-                layout="responsive"
-                width={100}
-                height={200}
+                fill
+                style={{ objectFit: "contain" }}
                 alt="why thehyperbrand reason2"
               />
-            </div>
+            </Box>
           )}
           {curView === 2 && (
-            <div className="w-3/4">
+            <Box
+              sx={{
+                width: { sm: "356px", lg: "512px" },
+                height: { sm: "200px", lg: "300px" },
+                position: "relative",
+              }}
+            >
               <Image
                 src="/images/how-it-works/img1.svg"
-                layout="responsive"
-                width={100}
-                height={200}
-                alt="why thehyperbrand reason2"
+                fill
+                style={{ objectFit: "contain" }}
+                alt="why thehyperbrand reason3"
               />
-            </div>
+            </Box>
           )}
           {curView === 3 && (
-            <div className="w-3/4">
+            <Box
+              sx={{
+                width: { sm: "356px", lg: "512px" },
+                height: { sm: "200px", lg: "300px" },
+                position: "relative",
+              }}
+            >
               <Image
                 src="/images/how-it-works/img1.svg"
-                layout="responsive"
-                width={100}
-                height={200}
-                alt="why thehyperbrand reason2"
+                fill
+                style={{ objectFit: "contain" }}
+                alt="why thehyperbrand reason4"
               />
-            </div>
+            </Box>
           )}
-          <div className="flex flex-col justify-start items-center gap-4">
+          <div className="flex flex-col justify-center items-center gap-4 w-full">
             <div className="text-md text-gray-500">
               Discover personalized topic recommendations for your business
             </div>
-            <button className="px-4 xl:px-6 py-2 rounded-3xl border border-black bg-white hover:bg-gray-100">
-              Learn more
+            <button className="bg-neutral-100 px-4 py-2 rounded-3xl border border-black">
+              <a href="https://thb-frontend.azurewebsites.net/signup">
+                Get Started <ArrowRightAltIcon />
+              </a>
             </button>
           </div>
+        </div>
+      </div>
+      <div className="w-full relative px-4">
+        <div className="flex md:hidden flex-col justify-start items-start w-full relative gap-4">
+          <Accordion className="border border-black rounded-md w-full relative">
+            <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+              <div className="font-semibold w-full relative">
+                1. Provide business details
+              </div>
+            </AccordionSummary>
+            <AccordionDetails>
+              <div className="flex flex-col justify-start items-center w-full relative">
+                <div className="w-full h-52 relative">
+                  <Image
+                    src="/images/how-it-works/img1.svg"
+                    fill
+                    style={{ objectFit: "contain" }}
+                    alt="why thehyperbrand reason1"
+                  />
+                </div>
+                <div className="text-center text-sm">
+                  Discover personalized topic recommendations for your business
+                </div>
+              </div>
+            </AccordionDetails>
+          </Accordion>
+          <Accordion className="border border-black rounded-md w-full relative">
+            <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+              <div className="font-semibold w-full relative">
+                2. Choose Topic
+              </div>
+            </AccordionSummary>
+            <AccordionDetails>
+              <div className="flex flex-col justify-start items-center w-full relative">
+                <div className="w-full h-52 relative">
+                  <Image
+                    src="/images/how-it-works/img1.svg"
+                    fill
+                    style={{ objectFit: "contain" }}
+                    alt="why thehyperbrand reason2"
+                  />
+                </div>
+                <div className="text-center text-sm">
+                  Discover personalized topic recommendations for your business
+                </div>
+              </div>
+            </AccordionDetails>
+          </Accordion>
+          <Accordion className="border border-black rounded-md w-full relative">
+            <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+              <div className="font-semibold w-full relative">
+                3. Publish Blogs
+              </div>
+            </AccordionSummary>
+            <AccordionDetails>
+              <div className="flex flex-col justify-start items-center w-full relative">
+                <div className="w-full h-52 relative">
+                  <Image
+                    src="/images/how-it-works/img1.svg"
+                    fill
+                    style={{ objectFit: "contain" }}
+                    alt="why thehyperbrand reason3"
+                  />
+                </div>
+                <div className="text-center text-sm">
+                  Discover personalized topic recommendations for your business
+                </div>
+              </div>
+            </AccordionDetails>
+          </Accordion>
+          <Accordion className="border border-black rounded-md w-full relative">
+            <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+              <div className="font-semibold w-full relative">
+                4. Start getting traffic
+              </div>
+            </AccordionSummary>
+            <AccordionDetails>
+              <div className="flex flex-col justify-start items-center w-full relative">
+                <div className="w-full h-52 relative">
+                  <Image
+                    src="/images/how-it-works/img1.svg"
+                    fill
+                    style={{ objectFit: "contain" }}
+                    alt="why thehyperbrand reason4"
+                  />
+                </div>
+                <div className="text-center text-sm">
+                  Discover personalized topic recommendations for your business
+                </div>
+              </div>
+            </AccordionDetails>
+          </Accordion>
         </div>
       </div>
     </div>

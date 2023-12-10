@@ -112,30 +112,30 @@ const RevenueEstimator = () => {
       className="flex flex-col justify-start items-start w-full relative mt-36 gap-12"
       style={{ backgroundColor: "#F6F6F4" }}
     >
-      <div className="text-2xl flex justify-center items-start w-full relative pt-10">
+      <div className="text-2xl flex justify-center items-start w-full relative pt-10 font-medium">
         {`Revenue Estimator`}
       </div>
-      <div className="flex justify-center items-center px-40 gap-32 relative w-full">
-        <div className="flex flex-col justify-start items-start gap-4 relative w-full">
+      <div className="flex flex-col md:flex-row justify-center items-center px-10 lg:px-32 gap-10 lg:gap-20 relative w-full">
+        <div className="flex flex-col justify-start items-start gap-4 relative w-full md:w-max">
           <label className="text-sm font-light ">Your Website URL</label>
-          <div className="relative">
+          <div className="flex w-full relative">
             <input
               type="text"
               placeholder=""
               className={`bg-gray-50 border ${
                 isValidProjectUrl ? "border-gray-300" : "border-gray-300"
-              } text-gray-900 text-sm rounded-2xl block w-full p-2.5`}
+              } text-gray-900 text-sm rounded-2xl relative w-full p-2.5`}
               required
               value={projectWebsiteUrl}
               onChange={updateProjectWebisteUrl}
             />
           </div>
         </div>
-        <div className="flex flex-col justify-start items-start gap-4  relative w-full">
+        <div className="flex flex-col justify-start items-start gap-4 relative w-full md:w-max">
           <label className="text-sm font-light">Country</label>
-          <div className="relative">
+          <div className="flex w-full md:w-max relative">
             <select
-              className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-2xl focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+              className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-2xl focus:ring-blue-500 focus:border-blue-500 relative w-full p-2.5"
               value={country}
               onChange={(event) => setCountry(event.target.value)}
             >
@@ -148,9 +148,9 @@ const RevenueEstimator = () => {
             </select>
           </div>
         </div>
-        <div className="flex flex-col justify-start items-start relative w-full gap-4">
+        <div className="flex flex-col justify-start items-start relative w-full md:w-max gap-4">
           <div className="font-light text-sm">Average Buy Value (ABV)</div>
-          <div className="flex justify-start items-stretch">
+          <div className="flex justify-start items-stretch relative">
             <select className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-tl-2xl rounded-bl-2xl pl-4">
               <option value="US">$</option>
               <option value="IND">Rs</option>
@@ -164,28 +164,27 @@ const RevenueEstimator = () => {
                 }
               }}
               type="number"
-              className="resize border px-3 py-2 w-full rounded-tr-2xl rounded-br-2xl"
+              className="resize border px-3 py-2 relative rounded-tr-2xl rounded-br-2xl"
             ></input>
           </div>
         </div>
       </div>
-      <div className="flex justify-center items-center w-full relative gap-32">
+      <div className="flex flex-col md:flex-row justify-center items-center w-full relative gap-10 lg:gap-32">
         <div className="flex flex-col justify-start item-center relative gap-4">
           <div className="text-md text-center">
             No. of months using TheHyperBrand
           </div>
-          <div className="w-full relative">
+          <div className="w-full relative flex justify-center items-center">
             <CustomSlider
               aria-label="Custom marks"
-              // defaultValue={100}
               getAriaValueText={valuetext}
               step={null}
-              valueLabelDisplay="auto"
+              valueLabelDisplay="off"
               marks={sliderMarks}
               min={10}
               max={90}
               value={months}
-              sx={{ width: "500px", height: "6px" }}
+              sx={{ width: { md: "500px", xs: "300px" }, height: "6px" }}
               onChange={(event) => {
                 setMonths(event.target.value);
                 calculateRevenue(event.target.value, abv);
@@ -200,7 +199,9 @@ const RevenueEstimator = () => {
       </div>
       <div className="flex justify-center items-center relative w-full pb-10">
         <button className="bg-neutral-100 px-4 py-2 rounded-3xl border border-black">
-          Learn More <ArrowRightAltIcon />
+          <a href="https://thb-frontend.azurewebsites.net/signup">
+            Learn More <ArrowRightAltIcon />
+          </a>
         </button>
       </div>
     </div>

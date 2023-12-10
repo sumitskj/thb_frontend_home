@@ -1,41 +1,49 @@
 import Image from "next/image";
-import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 
 const Footer = () => {
   return (
     <div
-      className="flex flex-col justify-start items-center w-full relative py-10 px-8 mt-16"
+      className="flex flex-col justify-start items-center w-full relative py-10 px-8 mt-16 gap-14"
       style={{ backgroundColor: "#FBEAC3" }}
     >
-      <div className="grid grid-cols-4 justify-around items-start w-full relative">
-        <div className="col-span-1 flex flex-col justify-start items-start gap-4">
-          <div className="font-medium">Company</div>
-          <div>About Us</div>
-          <div>Pricing</div>
-        </div>
-        <div className="col-span-1 flex flex-col justify-start items-start gap-4">
-          <div className="font-medium">Product</div>
-          <div>Quick Start</div>
-          <div>Revenue Calculator</div>
-        </div>
-        <div className="col-span-1 flex flex-col justify-start items-start gap-4">
-          <div className="font-medium">Support</div>
-          <div>Quick Start</div>
-          <div>Pricing</div>
-        </div>
+      <div className="grid grid-cols-2 md:grid-cols-4 w-full relative gap-20">
         <div className="col-span-1 flex flex-col justify-start items-start gap-4">
           <Image
             src="/images/THB.svg"
             alt="TheHyperbrand Logo"
-            width={180}
+            width={160}
             height={40}
-            style={{ filter: "grayscale(100%)" }}
           />
-          <div>
+          <div className="text-sm font-light">
             We create SEO optimized content for your business that will increase
             your search engine rankings and drive more traffic to your website.
           </div>
         </div>
+        <div className="col-span-1 flex flex-col justify-start items-start gap-4">
+          <div className="font-semibold">Company</div>
+          <div className="text-sm font-light cursor-pointer">About Us</div>
+          <div className="text-sm font-light cursor-pointer">
+            Cancellation and Refund Policy
+          </div>
+          <div className="text-sm font-light cursor-pointer">
+            Terms and Conditions
+          </div>
+        </div>
+        <div className="col-span-1 flex flex-col justify-start items-start gap-4">
+          <div className="font-semibold cursor-pointer">Product</div>
+          <div className="text-sm font-light cursor-pointer">Quick Start</div>
+          <div className="text-sm font-light cursor-pointer">
+            Revenue Calculator
+          </div>
+        </div>
+        <div className="col-span-1 flex flex-col justify-start items-start gap-4">
+          <div className="font-semibold cursor-pointer">Support</div>
+          <div className="text-sm font-light cursor-pointer">Quick Start</div>
+          <div className="text-sm font-light cursor-pointer">Pricing</div>
+        </div>
+      </div>
+      <div className="text-xs font-light pb-20 lg:pb-0">
+        © Designed and Developed By The Hyper Brand
       </div>
     </div>
   );

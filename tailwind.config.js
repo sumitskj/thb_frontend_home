@@ -10,6 +10,8 @@ module.exports = {
       colors: {
         thbYellow: "#F4CE14",
         thbDarkYellow: "#D3973E",
+        thbBlue: "#1E63B9",
+        thbLightYellowBg: "#FFFAF0",
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
