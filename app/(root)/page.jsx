@@ -47,7 +47,12 @@ const Home = () => {
           </div>
           <div className="flex lg:hidden justify-center xl:justify-start items-center w-full relative gap-10 xl:gap-16 mt-4 xl:mt-0">
             <button className="px-4 xl:px-6 py-2 rounded-3xl border text-lg xl:text-xl border-black bg-white hover:bg-gray-100">
-              Book a Call
+              <a
+                href="https://calendly.com/thehyperbrand/onboarding"
+                target="_blank"
+              >
+                Book a call
+              </a>
             </button>
             <button className="px-4 xl:px-6 py-2 rounded-3xl border text-lg xl:text-xl border-black bg-thbYellow hover:bg-thbDarkYellow">
               <a href="https://app.thehyperbrand.com/signup">Get Started</a>
@@ -89,7 +94,7 @@ const Home = () => {
             </Marquee>
           </div>
         </div>
-        <RevenueEstimator />
+        {/* <RevenueEstimator /> */}
         <WhyHyperbrand />
         <HowItWorks />
         <Pricing />

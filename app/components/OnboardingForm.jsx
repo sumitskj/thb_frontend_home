@@ -3,10 +3,12 @@
 import { useState } from "react";
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 const { industries, countries } = require("../utils/constants");
 
 const OnboardingForm = () => {
+  const router = useRouter();
   const [projectWebsiteUrl, setProjectWebsiteUrl] = useState("");
   const [isValidProjectUrl, setIsValidProjectUrl] = useState(false);
   const [industry, setIndustry] = useState("");
@@ -25,6 +27,21 @@ const OnboardingForm = () => {
       setIsValidProjectUrl(false);
     }
     console.log("Valid: " + isValidProjectUrl);
+  };
+
+  const handleGenerateBlog = () => {
+    const searchQuery = new URLSearchParams();
+    searchQuery.set("country", country);
+    searchQuery.set("website", projectWebsiteUrl);
+    searchQuery.set("industry", industry);
+    window.open(
+      `https://app.thehyperbrand.com/signup?${searchQuery.toString()}`,
+      "_self"
+    );
+    // window.open(
+    //   `http://localhost:3000/signup?${searchQuery.toString()}`,
+    //   "_self"
+    // );
   };
 
   return (
@@ -94,10 +111,11 @@ const OnboardingForm = () => {
         </div>
       </div>
       <div className="flex justify-center items-center relative w-full">
-        <button className="bg-neutral-100 px-4 py-2 rounded-3xl border border-black">
-          <a href="https://app.thehyperbrand.com/signup">
-            Generate Blog <ArrowRightAltIcon />
-          </a>
+        <button
+          onClick={handleGenerateBlog}
+          className="bg-neutral-100 px-4 py-2 rounded-3xl border border-black"
+        >
+          Generate Blog <ArrowRightAltIcon />
         </button>
       </div>
     </div>
