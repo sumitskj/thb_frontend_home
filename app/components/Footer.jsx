@@ -21,25 +21,33 @@ const Footer = () => {
         </div>
         <div className="col-span-1 flex flex-col justify-start items-start gap-4">
           <div className="font-semibold">Company</div>
-          <div className="text-sm font-light cursor-pointer">About Us</div>
           <div className="text-sm font-light cursor-pointer">
-            Cancellation and Refund Policy
+            <a href="./privacy-policy">Privacy Policy</a>
           </div>
           <div className="text-sm font-light cursor-pointer">
-            Terms and Conditions
+            <a href="./cancellation-refund">Cancellation and Refund Policy</a>
+          </div>
+          <div className="text-sm font-light cursor-pointer">
+            <a href="./terms-and-conditions">Terms and Conditions</a>
           </div>
         </div>
         <div className="col-span-1 flex flex-col justify-start items-start gap-4">
           <div className="font-semibold cursor-pointer">Product</div>
-          <div className="text-sm font-light cursor-pointer">Quick Start</div>
+          <div className="text-sm font-light cursor-pointer">
+            <a href="https://app.thehyperbrand.com/signup">Quick Start</a>
+          </div>
           <div className="text-sm font-light cursor-pointer">
             Revenue Calculator
           </div>
         </div>
         <div className="col-span-1 flex flex-col justify-start items-start gap-4">
           <div className="font-semibold cursor-pointer">Support</div>
-          <div className="text-sm font-light cursor-pointer">Quick Start</div>
-          <div className="text-sm font-light cursor-pointer">Pricing</div>
+          <div className="text-sm font-light cursor-pointer">
+            <a href="https://app.thehyperbrand.com/signup">Quick Start</a>
+          </div>
+          <div className="text-sm font-light cursor-pointer">
+            <a href="#pricingDiv">Pricing</a>
+          </div>
         </div>
       </div>
       <div className="text-xs font-light pb-20 lg:pb-0">

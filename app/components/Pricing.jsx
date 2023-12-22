@@ -31,7 +31,7 @@ const Pricing = () => {
   };
 
   return (
-    <div className="flex flex-col relative w-full justify-start items-center gap-6 mt-16 md:mt-16">
+    <div id="pricingDiv" className="flex flex-col relative w-full justify-start items-center gap-6 mt-16 md:mt-16">
       <div className="text-2xl flex justify-center items-start w-full relative pt-10 font-medium">
         Pricing
       </div>
