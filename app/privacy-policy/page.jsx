@@ -3,7 +3,7 @@ import styled from "@emotion/styled";
 import { Box, Typography } from "@mui/material";
 import Image from "next/image";
 
-const TermsAndConditions = () => {
+const PrivacyPolicy = () => {
   const TextStyled = styled(Typography)`
     text-align: justify;
     position: relative;
@@ -219,4 +219,4 @@ const TermsAndConditions = () => {
   );
 };
 
-export default TermsAndConditions;
+export default PrivacyPolicy;

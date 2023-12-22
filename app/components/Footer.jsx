@@ -43,7 +43,7 @@ const Footer = () => {
         <div className="col-span-1 flex flex-col justify-start items-start gap-4">
           <div className="font-semibold cursor-pointer">Support</div>
           <div className="text-sm font-light cursor-pointer">
-            <a href="https://app.thehyperbrand.com/signup">Quick Start</a>
+            <a href="./contact-us">Contact Us</a>
           </div>
           <div className="text-sm font-light cursor-pointer">
             <a href="#pricingDiv">Pricing</a>
