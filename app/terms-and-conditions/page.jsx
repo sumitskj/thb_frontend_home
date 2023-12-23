@@ -55,6 +55,8 @@ const TermsAndConditions = () => {
         <br />
         <TextStyled>
           Welcome to TheHyperBrand! <br />
+          <br />
+          <TextStyled>Effective Date: 20 Dec 2023</TextStyled>
           <br /> These Terms and Conditions (&quot;Terms&quot;) govern your use
           of the website https://thehyperbrand.com/ (the &quot;Website&quot;).
           By accessing or using the Website, you agree to be bound by these
