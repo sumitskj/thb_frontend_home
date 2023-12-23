@@ -36,9 +36,9 @@ const Footer = () => {
           <div className="text-sm font-light cursor-pointer">
             <a href="https://app.thehyperbrand.com/signup">Quick Start</a>
           </div>
-          <div className="text-sm font-light cursor-pointer">
+          {/* <div className="text-sm font-light cursor-pointer">
             Revenue Calculator
-          </div>
+          </div> */}
         </div>
         <div className="col-span-1 flex flex-col justify-start items-start gap-4">
           <div className="font-semibold cursor-pointer">Support</div>

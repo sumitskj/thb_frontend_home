@@ -52,10 +52,10 @@ const MainHeader = () => {
             <a href="https://app.thehyperbrand.com/signup">Sign Up</a>
           </button>
           <div>Try for Free</div>
-          <div>Revenue Estimator</div>
+          {/* <div>Revenue Estimator</div> */}
           <div>Pricing</div>
           <div>How it works</div>
-          <div>Blogs</div>
+          {/* <div>Blogs</div> */}
         </div>
       </Drawer>
     );
@@ -88,18 +88,18 @@ const MainHeader = () => {
           <div className="hidden lg:block font-medium text-sm md:text-base cursor-pointer hover:border-b-2 border-thbYellow">
             <a href="https://app.thehyperbrand.com/login">Try for Free</a>
           </div>
-          <div className="hidden lg:block font-medium text-sm md:text-base cursor-pointer hover:border-b-2 border-thbYellow">
+          {/* <div className="hidden lg:block font-medium text-sm md:text-base cursor-pointer hover:border-b-2 border-thbYellow">
             <Link href={"#revenue-estimator"}>Revenue Estimator</Link>
-          </div>
+          </div> */}
           <div className="hidden lg:block font-medium text-sm md:text-base cursor-pointer hover:border-b-2 border-thbYellow">
-            <Link href={"#pricing"}>Pricing</Link>
+            <Link href={"#pricingDiv"}>Pricing</Link>
           </div>
           <div className="hidden lg:block font-medium text-sm md:text-base cursor-pointer hover:border-b-2 border-thbYellow">
             <Link href={"#how-it-works"}>How it works</Link>
           </div>
-          <div className="hidden lg:block font-medium text-sm md:text-base cursor-pointer hover:border-b-2 border-thbYellow">
+          {/* <div className="hidden lg:block font-medium text-sm md:text-base cursor-pointer hover:border-b-2 border-thbYellow">
             Blogs
-          </div>
+          </div> */}
           <button className="hidden lg:block px-4 py-2 text-sm md:text-base rounded-3xl border border-black bg-white hover:bg-gray-100">
             <a
               href="https://calendly.com/thehyperbrand/onboarding"
