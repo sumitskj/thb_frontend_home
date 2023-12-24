@@ -51,10 +51,16 @@ const MainHeader = () => {
           <button className="px-4 py-2 text-sm md:text-base rounded-3xl border border-black bg-thbYellow">
             <a href="https://app.thehyperbrand.com/signup">Sign Up</a>
           </button>
-          <div>Try for Free</div>
+          <div>
+            <a href="https://app.thehyperbrand.com/signup">Try for Free</a>
+          </div>
           {/* <div>Revenue Estimator</div> */}
-          <div>Pricing</div>
-          <div>How it works</div>
+          <div>
+            <Link href={"#pricingDiv"}>Pricing</Link>
+          </div>
+          <div>
+            <Link href={"#how-it-works"}>How it works</Link>
+          </div>
           {/* <div>Blogs</div> */}
         </div>
       </Drawer>
