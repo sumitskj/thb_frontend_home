@@ -58,7 +58,7 @@ const ContactUsPage = () => {
           If you need any assistance please send a mail with your queries at{" "}
           <a href="sumit@thehyperbrand.com">sumit@thehyperbrand.com</a>
           <br />
-          Address: Flat 301, Varsha Appartment, Dattawadi, Nagpur - 440023.
+          Address: B-67 Sarvodaya Enclave, New Delhi, 110017
         </TextStyled>
       </Box>
     </>
