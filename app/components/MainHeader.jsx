@@ -61,7 +61,11 @@ const MainHeader = () => {
           <div>
             <Link href={"#how-it-works"}>How it works</Link>
           </div>
-          {/* <div>Blogs</div> */}
+          <div>
+            <a href="https://blog.thehyperbrand.com/" target="_blank">
+              Blog
+            </a>
+          </div>
         </div>
       </Drawer>
     );
@@ -103,9 +107,11 @@ const MainHeader = () => {
           <div className="hidden lg:block font-medium text-sm md:text-base cursor-pointer hover:border-b-2 border-thbYellow">
             <Link href={"#how-it-works"}>How it works</Link>
           </div>
-          {/* <div className="hidden lg:block font-medium text-sm md:text-base cursor-pointer hover:border-b-2 border-thbYellow">
-            Blogs
-          </div> */}
+          <div className="hidden lg:block font-medium text-sm md:text-base cursor-pointer hover:border-b-2 border-thbYellow">
+            <a href="https://blog.thehyperbrand.com/" target="_blank">
+              Blog
+            </a>
+          </div>
           <button className="hidden lg:block px-4 py-2 text-sm md:text-base rounded-3xl border border-black bg-white hover:bg-gray-100">
             <a
               href="https://calendly.com/thehyperbrand/onboarding"
