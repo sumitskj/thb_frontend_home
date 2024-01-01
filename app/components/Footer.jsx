@@ -53,7 +53,7 @@ const Footer = () => {
       <div className="flex justify-center items-center w-full text-xs">Follow us</div>
       <div className="flex justify-center items-center w-full relative gap-6">
         <div className="cursor-pointer">
-          <a href="" target="_blank">
+          <a href="https://twitter.com/_thehyperbrand?t=2_rTY-z4OI1FK5U-AOe8UQ&s=09" target="_blank">
             <svg
               className={`w-6 h-6 text-black`}
               aria-hidden="true"
@@ -69,7 +69,7 @@ const Footer = () => {
           </a>
         </div>
         <div className="cursor-pointer">
-          <a href="" target="_blank">
+          <a href="https://www.instagram.com/_thehyperbrand?igsh=amxzM3lpemx3bXYx" target="_blank">
             <svg
               className={`w-6 h-6 text-black`}
               viewBox="0 0 20 20"
