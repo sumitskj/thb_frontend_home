@@ -50,7 +50,7 @@ const OnboardingForm = () => {
         {`Generate a blog for free`}
       </div>
       <div className="flex flex-col md:flex-row justify-stretch md:justify-center items-start md:items-center p-12 gap-8 lg:gap-20 relative w-full">
-        <div className="hidden lg:block absolute left-20 top-0">
+        <div className="hidden xl:block absolute xl:left-20 top-0">
           <Image
             src="/images/onboarding/img1.svg"
             alt="TheHyperbrand Logo"

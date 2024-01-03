@@ -5,11 +5,11 @@ const PricingCard = ({ pricing, monthly, setMonthly }) => {
   return (
     <div
       className={`max-w-sm rounded-lg overflow-hidden shadow-lg bg-white text-center ${
-        pricing.planName === "Business" ? "border-1 border-thbBlue" : ""
+        pricing.planName === "Business" ? "border border-gray-200" : "border border-gray-200"
       }`}
     >
       {pricing.planName === "Business" && (
-        <div className="flex text-xs py-1 justify-center items-center bg-thbBlue text-white">
+        <div className="flex text-xs py-1 justify-center items-center bg-blue-500 text-white">
           Recommended
         </div>
       )}
@@ -17,36 +17,36 @@ const PricingCard = ({ pricing, monthly, setMonthly }) => {
         <div className="flex text-xs py-1 justify-center items-center bg-white text-white"></div>
       )}
       <div className="px-6 py-4">
-        <div className="font-bold text-xl mb-2">{pricing.planName}</div>
-        <p className="text-gray-700 text-sm">
+        <div className="font-semibold mb-2">{pricing.planName}</div>
+        <p className="text-black text-xs">
           Best for Small Businesses, Startups and SEO Marketers.
         </p>
       </div>
       <div className="px-6 pt-4 pb-2">
         {monthly && (
           <>
-            <span className="text-4xl font-bold">₹{pricing.monthlyPrice}</span>
+            <span className="text-2xl font-semibold">₹{pricing.monthlyPrice}</span>
             <span className="text">/mo</span>
             <p className="text-gray-600 text-sm">(billed monthly)</p>
           </>
         )}
-        {!monthly && (
+        {/* {!monthly && (
           <>
             <span className="text-4xl font-bold">₹{pricing.annualPrice}</span>
             <span className="text">/year</span>
             <p className="text-gray-600 text-sm">(billed annually)</p>
           </>
-        )}
+        )} */}
         <div className="mt-4 mb-6">
           <button
             onClick={() => setMonthly(true)}
             className={`mx-2 text-gray-800 font-bold py-2 px-4 rounded-full ${
-              monthly ? "bg-thbBlue text-white" : "bg-gray-200 text-black"
+              monthly ? "bg-gray-200 text-black" : "bg-gray-200 text-black"
             }`}
           >
             Monthly
           </button>
-          <button
+          {/* <button
             onClick={() => setMonthly(false)}
             className={`mx-2 font-bold py-2 px-4 rounded-full ${
               monthly === false
@@ -55,7 +55,7 @@ const PricingCard = ({ pricing, monthly, setMonthly }) => {
             }`}
           >
             Annually
-          </button>
+          </button> */}
         </div>
       </div>
       <ul className="px-6 text-left">
@@ -103,7 +103,7 @@ const PricingCard = ({ pricing, monthly, setMonthly }) => {
           onClick={() =>
             window.open("https://app.thehyperbrand.com/signup", "_self")
           }
-          className="bg-yellow-400 hover:bg-yellow-500 py-2 px-4 rounded-full w-full font-medium"
+          className="bg-yellow-400 hover:bg-yellow-500 py-2 px-4 rounded-full w-full font-medium text-sm"
         >
           Get Started
         </button>

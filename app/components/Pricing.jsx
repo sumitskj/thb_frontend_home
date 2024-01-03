@@ -4,7 +4,7 @@ import PricingCard from "./PricingCard";
 import { fetchBackendApiWrapper } from "../utils/apiWrapper";
 
 const Pricing = () => {
-  const [monthly, setMonthly] = useState(false);
+  const [monthly, setMonthly] = useState(true);
   const [plans, setPlans] = useState(false);
 
   useEffect(() => {
@@ -40,7 +40,7 @@ const Pricing = () => {
       <div className="text-center text-gray-600 px-6 text-sm md:text-base">
         Grow your business with AI-powered content that ranks.
       </div>
-      <div className="mt-4 flex justify-center items-center gap-0">
+      {/* <div className="mt-4 flex justify-center items-center gap-0">
         <button
           onClick={() => setMonthly(true)}
           className={`text-gray-800 font-bold py-2 px-4 rounded-l-full ${
@@ -59,8 +59,8 @@ const Pricing = () => {
         >
           Annually
         </button>
-      </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center items-center w-full relative gap-10 px-10 lg:px-30 py-8">
+      </div> */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center items-center w-full xl:w-10/12 relative gap-4 px-10 lg:px-30 py-4">
         {plans &&
           plans.map((p) => {
             return (

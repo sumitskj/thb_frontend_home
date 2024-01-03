@@ -87,7 +87,7 @@ const HowItWorks = () => {
               }}
             >
               <Image
-                src="/images/how-it-works/img1.svg"
+                src="/images/how-it-works/img2.svg"
                 fill
                 style={{ objectFit: "contain" }}
                 alt="why thehyperbrand reason2"
@@ -103,7 +103,7 @@ const HowItWorks = () => {
               }}
             >
               <Image
-                src="/images/how-it-works/img1.svg"
+                src="/images/how-it-works/img3.svg"
                 fill
                 style={{ objectFit: "contain" }}
                 alt="why thehyperbrand reason3"
@@ -119,7 +119,7 @@ const HowItWorks = () => {
               }}
             >
               <Image
-                src="/images/how-it-works/img1.svg"
+                src="/images/how-it-works/img3.svg"
                 fill
                 style={{ objectFit: "contain" }}
                 alt="why thehyperbrand reason4"
