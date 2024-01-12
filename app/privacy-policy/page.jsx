@@ -202,7 +202,7 @@ const PrivacyPolicy = () => {
           If you have any questions, concerns, or requests regarding this
           Privacy Policy or the handling of your personal information, please
           contact us at{" "}
-          <a href="sumit@thehyperbrand.com">sumit@thehyperbrand.com</a>.
+          <a href="rishabh@thehyperbrand.com">rishabh@thehyperbrand.com</a>.
         </TextStyled>
         <br />
         <br />

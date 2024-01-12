@@ -7,17 +7,24 @@ const { default: Link } = require("next/link");
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
-import {
-  Drawer,
-  List,
-  ListItem,
-  ListItemButton,
-  ListItemText,
-} from "@mui/material";
+import { Drawer } from "@mui/material";
 
 const MainHeader = () => {
   const [top, setTop] = useState(true);
   const [openMobileMenu, setOpenMobileMenu] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      if (typeof window !== "undefined" && typeof window.gtag === "function") {
+        window.gtag("event", "Prelogin Homepage", {
+          event_category: "Page load",
+          event_label: "User lands on homepage",
+          location: window.location.pathname,
+        });
+        console.log("Sending event");
+      }
+    }, 5000);
+  }, []);
 
   useEffect(() => {
     const scrollHandler = () => {
@@ -49,7 +56,7 @@ const MainHeader = () => {
             </a>
           </button>
           <button className="px-4 py-2 text-sm md:text-base rounded-3xl border border-black bg-thbYellow">
-            <a href="https://app.thehyperbrand.com/signup">Sign Up</a>
+            <a href="https://app.thehyperbrand.com/signup">Sign In</a>
           </button>
           <div>
             <a href="https://app.thehyperbrand.com/signup">Try for Free</a>
@@ -121,7 +128,7 @@ const MainHeader = () => {
             </a>
           </button>
           <button className="px-4 py-2 text-sm md:text-base rounded-3xl border border-black bg-thbYellow hover:bg-thbDarkYellow">
-            <a href="https://app.thehyperbrand.com/signup">Sign Up</a>
+            <a href="https://app.thehyperbrand.com/signup">Sign In</a>
           </button>
           <div
             onClick={() => setOpenMobileMenu(true)}

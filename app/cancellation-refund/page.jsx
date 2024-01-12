@@ -132,7 +132,7 @@ const CancellationAndRefund = () => {
           period. <br />
           To cancel your subscription, please follow the cancellation
           instructions provided within the application or contact our support
-          team at <a href="sumit@thehyperbrand.com">sumit@thehyperbrand.com</a>
+          team at <a href="rishabh@thehyperbrand.com">rishabh@thehyperbrand.com</a>
           <br />
           <br />
           <strong>f. Refund Policy:</strong> <br />- Free Trial: No charges are
@@ -149,7 +149,7 @@ const CancellationAndRefund = () => {
           <br />
           <strong>g. Requesting a Refund:</strong> <br />
           For special cases requiring a refund, please contact our support team
-          at <a href="sumit@thehyperbrand.com">sumit@thehyperbrand.com</a>.
+          at <a href="rishabh@thehyperbrand.com">rishabh@thehyperbrand.com</a>.
           Provide detailed information about the issue, including your username,
           the nature of the problem, and any relevant documentation.
         </TextStyled>

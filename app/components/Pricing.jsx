@@ -22,7 +22,8 @@ const Pricing = () => {
       );
       if (res && res.ok) {
         const data = await res.json();
-        setPlans(data);
+        const tmp = data.filter(pl => pl.active);
+        setPlans(tmp);
       }
     } catch (err) {
       console.error("Error in fetching plans: " + JSON.stringify(err));

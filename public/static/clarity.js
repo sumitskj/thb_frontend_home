@@ -9,4 +9,4 @@
   t.src = "https://www.clarity.ms/tag/" + i;
   y = l.getElementsByTagName(r)[0];
   y.parentNode.insertBefore(t, y);
-})(window, document, "clarity", "script", "kefi5bi6qn");
+})(window, document, "clarity", "script", "kefonafsj5");

@@ -56,7 +56,7 @@ const ContactUsPage = () => {
         <TextStyled sx={{ fontWeight: "400", fontSize: "1.2rem" }}>
           <br />
           If you need any assistance please send a mail with your queries at{" "}
-          <a href="sumit@thehyperbrand.com">sumit@thehyperbrand.com</a>
+          <a href="rishabh@thehyperbrand.com">rishabh@thehyperbrand.com</a>
           <br />
           Address: B-67 Sarvodaya Enclave, New Delhi, 110017
         </TextStyled>

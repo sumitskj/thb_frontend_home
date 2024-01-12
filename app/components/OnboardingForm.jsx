@@ -115,7 +115,7 @@ const OnboardingForm = () => {
           onClick={handleGenerateBlog}
           className="bg-neutral-100 px-4 py-2 rounded-3xl border border-black"
         >
-          Generate Blog <ArrowRightAltIcon />
+          Get Free Blog <ArrowRightAltIcon />
         </button>
       </div>
     </div>

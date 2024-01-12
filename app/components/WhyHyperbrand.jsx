@@ -8,8 +8,8 @@ const WhyHyperbrand = () => {
         Why TheHyperBrand ?
       </div>
       <div className="text-center text-gray-600 px-6 text-sm md:text-base">
-        We show you a complete analysis of your website, with the most urgent
-        improvements and warnings to improve SEO.
+        Rank high on Google by creating SEO optimized content and high-quality
+        backlinks with HyperBrand.
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-stretch items-start gap-0 w-full relative lg:max-h-96 mt-6">
         <div
@@ -23,11 +23,11 @@ const WhyHyperbrand = () => {
               className="object-contain h-72 w-full"
             />
           </div>
-          <div className="flex flex-col justify-start items-center w-full relative gap-4 max-h-full">
+          <div className="flex flex-col justify-start items-center w-full relative gap-4 h-24">
             <div className="text-lg font-medium">Huge Savings</div>
             <div className="text-sm px-10 text-center font-light text-gray-700">
-              Get actionable next steps with a detailed technical SEO report
-              that shows the gaps in your website
+              {`Like saving money? Save > 80% by working with us as compared to other services.`}
+              services.
             </div>
           </div>
         </div>
@@ -42,11 +42,10 @@ const WhyHyperbrand = () => {
               className="object-contain h-72 w-full"
             />
           </div>
-          <div className="flex flex-col justify-start items-center w-full relative gap-4">
+          <div className="flex flex-col justify-start items-center w-full relative gap-4 h-24">
             <div className="text-lg font-medium">Content</div>
             <div className="text-sm px-10 text-center font-light text-gray-700">
-              Get actionable next steps with a detailed technical SEO report
-              that shows the gaps in your website
+              SEO optimized content. High Quality, Plagiarism Free, and Awesome.
             </div>
           </div>
         </div>
@@ -61,11 +60,11 @@ const WhyHyperbrand = () => {
               className="object-contain h-72 w-full"
             />
           </div>
-          <div className="flex flex-col justify-start items-center w-full relative gap-4">
+          <div className="flex flex-col justify-start items-center w-full relative gap-4 h-24">
             <div className="text-lg font-medium">Guided Tool</div>
             <div className="text-sm px-10 text-center font-light text-gray-700">
-              Get actionable next steps with a detailed technical SEO report
-              that shows the gaps in your website
+              You do the work, we bring the expertise. A complete SEO playbook
+              at your fingertips.
             </div>
           </div>
         </div>
@@ -80,11 +79,11 @@ const WhyHyperbrand = () => {
               className="object-contain h-72 w-full"
             />
           </div>
-          <div className="flex flex-col justify-start items-center w-full relative gap-4">
+          <div className="flex flex-col justify-start items-center w-full relative gap-4 h-24">
             <div className="text-lg font-medium">Backlinks finder</div>
             <div className="text-sm px-10 text-center font-light text-gray-700">
-              Get actionable next steps with a detailed technical SEO report
-              that shows the gaps in your website
+              High quality backlinks. Simplified process. Just a few clicks
+              away.
             </div>
           </div>
         </div>

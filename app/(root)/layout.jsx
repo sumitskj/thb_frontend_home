@@ -1,6 +1,5 @@
 import { Inter } from "next/font/google";
 import "../globals.css";
-import Head from "next/head";
 import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -12,8 +11,14 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+
   return (
     <html lang="en">
+      <Script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=G-Y4YZZ389DC"
+      ></Script>
+      <Script type="text/javascript" src="/static/ga.js"></Script>
       <Script type="text/javascript" src="/static/clarity.js"></Script>
       <body className={inter.className}>{children}</body>
     </html>
