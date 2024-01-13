@@ -1,5 +1,6 @@
 "use client";
 import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
+import { sendGAEvent } from "../utils/commonUtil";
 
 const PricingCard = ({ pricing, monthly, setMonthly }) => {
   return (
@@ -76,9 +77,14 @@ const PricingCard = ({ pricing, monthly, setMonthly }) => {
           </div>
           <div className="px-6 pb-6 w-full text-center">
             <button
-              onClick={() =>
-                window.open("https://app.thehyperbrand.com/signup", "_self")
-              }
+              onClick={() => {
+                sendGAEvent(
+                  `Get started - ${pricing.planName}`,
+                  "Click",
+                  `User clicks on Get started for ${pricing.planName} pricing`
+                );
+                window.open("https://app.thehyperbrand.com/signup", "_self");
+              }}
               className="bg-yellow-400 hover:bg-yellow-500 py-2 px-4 rounded-full w-full font-medium text-sm"
             >
               Get Started
@@ -168,10 +174,7 @@ const PricingCard = ({ pricing, monthly, setMonthly }) => {
           <div className="px-6 pb-6 w-full text-center">
             <button
               onClick={() =>
-                window.open(
-                  "https://wa.me/919818090406",
-                  "_blank"
-                )
+                window.open("https://wa.me/919818090406", "_blank")
               }
               className="bg-yellow-400 hover:bg-yellow-500 py-2 px-4 rounded-full w-full font-medium text-sm"
             >

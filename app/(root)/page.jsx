@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import OnboardingForm from "../components/OnboardingForm";
 import RevenueEstimator from "../components/RevenueEstimator";
@@ -7,7 +8,8 @@ import Pricing from "../components/Pricing";
 import Footer from "../components/Footer";
 import MainHeader from "../components/MainHeader";
 import Marquee from "react-fast-marquee";
-import CreditCardIcon from '@mui/icons-material/CreditCard';
+import CreditCardIcon from "@mui/icons-material/CreditCard";
+import { sendGAEvent } from "../utils/commonUtil";
 
 const Home = () => {
   return (
@@ -29,7 +31,16 @@ const Home = () => {
               <div className="text-center lg:text-left text-sm md:text-xl lg:text-xl text-gray-500 font-light">{`We help you do end-to-end SEO without needing any previous experience. Faster, and at throw-away prices.`}</div>
             </div>
             <div className="hidden lg:flex justify-stretch lg:justify-start items-center w-full relative gap-10 lg:gap-16 mt-4 lg:mt-0">
-              <button className="px-4 lg:px-8 py-2 rounded-3xl border text-sm md:text-base lg:text-xl font-light border-black bg-white hover:bg-gray-100">
+              <button
+                onClick={() =>
+                  sendGAEvent(
+                    "Book a call - landing page",
+                    "Click",
+                    "User clicks on Book a Call"
+                  )
+                }
+                className="px-4 lg:px-8 py-2 rounded-3xl border text-sm md:text-base lg:text-xl font-light border-black bg-white hover:bg-gray-100"
+              >
                 <a
                   href="https://calendly.com/thehyperbrand/onboarding"
                   target="_blank"
@@ -37,7 +48,16 @@ const Home = () => {
                   Book a call
                 </a>
               </button>
-              <button className="px-6 lg:px-8 py-2 rounded-3xl border text-sm md:text-base lg:text-xl font-light border-black bg-thbYellow hover:bg-thbDarkYellow">
+              <button
+                onClick={() =>
+                  sendGAEvent(
+                    "Get started - landing page",
+                    "Click",
+                    "User clicks on Get Started"
+                  )
+                }
+                className="px-6 lg:px-8 py-2 rounded-3xl border text-sm md:text-base lg:text-xl font-light border-black bg-thbYellow hover:bg-thbDarkYellow"
+              >
                 <a href="https://app.thehyperbrand.com/signup">Get Started</a>
               </button>
             </div>
@@ -55,7 +75,16 @@ const Home = () => {
             </div>
           </div>
           <div className="flex lg:hidden justify-center xl:justify-start items-center w-full relative gap-10 xl:gap-16 mt-8 xl:mt-0">
-            <button className="px-4 xl:px-6 py-2 rounded-3xl border text-lg xl:text-xl border-black bg-white hover:bg-gray-100">
+            <button
+              onClick={() =>
+                sendGAEvent(
+                  "Book a call - landing page",
+                  "Click",
+                  "User clicks on Book a Call"
+                )
+              }
+              className="px-4 xl:px-6 py-2 rounded-3xl border text-lg xl:text-xl border-black bg-white hover:bg-gray-100"
+            >
               <a
                 href="https://calendly.com/thehyperbrand/onboarding"
                 target="_blank"
@@ -63,7 +92,16 @@ const Home = () => {
                 Book a call
               </a>
             </button>
-            <button className="px-4 xl:px-6 py-2 rounded-3xl border text-lg xl:text-xl border-black bg-thbYellow hover:bg-thbDarkYellow">
+            <button
+              onClick={() =>
+                sendGAEvent(
+                  "Get started - landing page",
+                  "Click",
+                  "User clicks on Get Started"
+                )
+              }
+              className="px-4 xl:px-6 py-2 rounded-3xl border text-lg xl:text-xl border-black bg-thbYellow hover:bg-thbDarkYellow"
+            >
               <a href="https://app.thehyperbrand.com/signup">Start Now</a>
             </button>
           </div>

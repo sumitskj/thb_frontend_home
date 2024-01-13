@@ -9,6 +9,7 @@ import {
   Box,
 } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import { sendGAEvent } from "../utils/commonUtil";
 
 const HowItWorks = () => {
   const [curView, setCurView] = useState(0);
@@ -119,7 +120,7 @@ const HowItWorks = () => {
               }}
             >
               <Image
-                src="/images/how-it-works/img3.svg"
+                src="/images/how-it-works/img4.svg"
                 fill
                 style={{ objectFit: "contain" }}
                 alt="why thehyperbrand reason4"
@@ -130,7 +131,16 @@ const HowItWorks = () => {
             <div className="text-md text-gray-500">
               Discover personalized topic recommendations for your business
             </div>
-            <button className="bg-neutral-100 px-4 py-2 rounded-3xl border border-black">
+            <button
+              onClick={() =>
+                sendGAEvent(
+                  "Get started - how it works",
+                  "Click",
+                  "User clicks on Get Started"
+                )
+              }
+              className="bg-neutral-100 px-4 py-2 rounded-3xl border border-black"
+            >
               <a href="https://app.thehyperbrand.com/signup">
                 Get Started <ArrowRightAltIcon />
               </a>
@@ -172,7 +182,7 @@ const HowItWorks = () => {
               <div className="flex flex-col justify-start items-center w-full relative">
                 <div className="w-full h-52 relative">
                   <Image
-                    src="/images/how-it-works/img1.svg"
+                    src="/images/how-it-works/img2.svg"
                     fill
                     style={{ objectFit: "contain" }}
                     alt="why thehyperbrand reason2"
@@ -194,7 +204,7 @@ const HowItWorks = () => {
               <div className="flex flex-col justify-start items-center w-full relative">
                 <div className="w-full h-52 relative">
                   <Image
-                    src="/images/how-it-works/img1.svg"
+                    src="/images/how-it-works/img3.svg"
                     fill
                     style={{ objectFit: "contain" }}
                     alt="why thehyperbrand reason3"
@@ -216,7 +226,7 @@ const HowItWorks = () => {
               <div className="flex flex-col justify-start items-center w-full relative">
                 <div className="w-full h-52 relative">
                   <Image
-                    src="/images/how-it-works/img1.svg"
+                    src="/images/how-it-works/img4.svg"
                     fill
                     style={{ objectFit: "contain" }}
                     alt="why thehyperbrand reason4"

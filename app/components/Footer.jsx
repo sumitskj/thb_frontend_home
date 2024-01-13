@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { sendGAEvent } from "../utils/commonUtil";
 
 const Footer = () => {
   return (
@@ -21,19 +22,55 @@ const Footer = () => {
         </div>
         <div className="col-span-1 flex flex-col justify-start items-start gap-4">
           <div className="font-semibold">Company</div>
-          <div className="text-sm font-light cursor-pointer">
+          <div
+            onClick={() =>
+              sendGAEvent(
+                "Privacy Policy",
+                "Click",
+                "User clicks on Privacy Policy"
+              )
+            }
+            className="text-sm font-light cursor-pointer"
+          >
             <a href="./privacy-policy">Privacy Policy</a>
           </div>
-          <div className="text-sm font-light cursor-pointer">
+          <div
+            onClick={() =>
+              sendGAEvent(
+                "Cancellation and Refund Policy",
+                "Click",
+                "User clicks on Cancellation and Refund Policy"
+              )
+            }
+            className="text-sm font-light cursor-pointer"
+          >
             <a href="./cancellation-refund">Cancellation and Refund Policy</a>
           </div>
-          <div className="text-sm font-light cursor-pointer">
+          <div
+            onClick={() =>
+              sendGAEvent(
+                "Terms and Conditions",
+                "Click",
+                "User clicks on Terms and Conditions"
+              )
+            }
+            className="text-sm font-light cursor-pointer"
+          >
             <a href="./terms-and-conditions">Terms and Conditions</a>
           </div>
         </div>
         <div className="col-span-1 flex flex-col justify-start items-start gap-4">
           <div className="font-semibold cursor-pointer">Product</div>
-          <div className="text-sm font-light cursor-pointer">
+          <div
+            onClick={() =>
+              sendGAEvent(
+                "Quick Start Footer",
+                "Click",
+                "User clicks on Quick Start"
+              )
+            }
+            className="text-sm font-light cursor-pointer"
+          >
             <a href="https://app.thehyperbrand.com/signup">Quick Start</a>
           </div>
           {/* <div className="text-sm font-light cursor-pointer">
@@ -42,18 +79,40 @@ const Footer = () => {
         </div>
         <div className="col-span-1 flex flex-col justify-start items-start gap-4">
           <div className="font-semibold cursor-pointer">Support</div>
-          <div className="text-sm font-light cursor-pointer">
+          <div
+            onClick={() =>
+              sendGAEvent(
+                "Contact Us Footer",
+                "Click",
+                "User clicks on Contact Us"
+              )
+            }
+            className="text-sm font-light cursor-pointer"
+          >
             <a href="./contact-us">Contact Us</a>
           </div>
-          <div className="text-sm font-light cursor-pointer">
+          <div
+            onClick={() =>
+              sendGAEvent("Pricing Footer", "Click", "User clicks on Pricing")
+            }
+            className="text-sm font-light cursor-pointer"
+          >
             <a href="#pricingDiv">Pricing</a>
           </div>
         </div>
       </div>
-      <div className="flex justify-center items-center w-full text-xs">Follow us</div>
+      <div className="flex justify-center items-center w-full text-xs">
+        Follow us
+      </div>
       <div className="flex justify-center items-center w-full relative gap-6">
-        <div className="cursor-pointer">
-          <a href="https://twitter.com/_thehyperbrand?t=2_rTY-z4OI1FK5U-AOe8UQ&s=09" target="_blank">
+        <div
+          onClick={() => sendGAEvent("X Footer", "Click", "User clicks on X")}
+          className="cursor-pointer"
+        >
+          <a
+            href="https://twitter.com/_thehyperbrand?t=2_rTY-z4OI1FK5U-AOe8UQ&s=09"
+            target="_blank"
+          >
             <svg
               className={`w-6 h-6 text-black`}
               aria-hidden="true"
@@ -68,8 +127,16 @@ const Footer = () => {
             </svg>
           </a>
         </div>
-        <div className="cursor-pointer">
-          <a href="https://www.instagram.com/_thehyperbrand?igsh=amxzM3lpemx3bXYx" target="_blank">
+        <div
+          onClick={() =>
+            sendGAEvent("Instagram Footer", "Click", "User clicks on Instagram")
+          }
+          className="cursor-pointer"
+        >
+          <a
+            href="https://www.instagram.com/_thehyperbrand?igsh=amxzM3lpemx3bXYx"
+            target="_blank"
+          >
             <svg
               className={`w-6 h-6 text-black`}
               viewBox="0 0 20 20"
@@ -85,7 +152,12 @@ const Footer = () => {
             </svg>
           </a>
         </div>
-        <div className="cursor-pointer">
+        <div
+          onClick={() =>
+            sendGAEvent("Linkedin Footer", "Click", "User clicks on Linkedin")
+          }
+          className="cursor-pointer"
+        >
           <a
             href="https://www.linkedin.com/company/the-hyper-brand/"
             target="_blank"
@@ -105,7 +177,12 @@ const Footer = () => {
             </svg>
           </a>
         </div>
-        <div className="cursor-pointer">
+        <div
+          onClick={() =>
+            sendGAEvent("Threads Footer", "Click", "User clicks on Threads")
+          }
+          className="cursor-pointer"
+        >
           <a href="" target="_blank">
             <svg
               className={`w-6 h-6 text-black`}
@@ -126,7 +203,12 @@ const Footer = () => {
             </svg>
           </a>
         </div>
-        <div className="cursor-pointer">
+        <div
+          onClick={() =>
+            sendGAEvent("Medium Footer", "Click", "User clicks on Medium")
+          }
+          className="cursor-pointer"
+        >
           <a href="" target="_blank">
             <svg
               className={`w-6 h-6 `}

@@ -4,6 +4,7 @@ import { useState } from "react";
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
+import { sendGAEvent } from "../utils/commonUtil";
 
 const { industries, countries } = require("../utils/constants");
 
@@ -30,6 +31,11 @@ const OnboardingForm = () => {
   };
 
   const handleGenerateBlog = () => {
+    sendGAEvent(
+      "Generate Blog - landing page",
+      "Click",
+      "User clicks on Generate Blog"
+    );
     const searchQuery = new URLSearchParams();
     searchQuery.set("country", country);
     searchQuery.set("website", projectWebsiteUrl);
