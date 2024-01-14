@@ -61,6 +61,7 @@ const Home = () => {
                 <a href="https://app.thehyperbrand.com/signup">Get Started</a>
               </button>
             </div>
+            <div className="hidden lg:block text-md">Free Trial Available. No credit card required</div>
           </div>
           <div className="flex flex-col justify-center items-center relative w-full xl:pl-20 h-full">
             <Image
@@ -69,11 +70,12 @@ const Home = () => {
               width={500}
               height={500}
             />
-            <div className="text-center rounded-md p-2 bg-blue-400 lg:text-left text-sm md:text-lg lg:text-lg text-white font-semibold flex justify-center items-center gap-2">
+            {/* <div className="text-center rounded-md p-2 bg-blue-400 lg:text-left text-sm md:text-lg lg:text-lg text-white font-semibold flex justify-center items-center gap-2">
               <CreditCardIcon color="white" />
               <div>{`No credit card required`}</div>
-            </div>
+            </div> */}
           </div>
+          <div className="lg:hidden text-md flex w-full justify-center mt-4 text-sm text-gray-600">Free Trial Available. No credit card required</div>
           <div className="flex lg:hidden justify-center xl:justify-start items-center w-full relative gap-10 xl:gap-16 mt-8 xl:mt-0">
             <button
               onClick={() =>
