@@ -9,12 +9,14 @@ const Footer = () => {
     >
       <div className="grid grid-cols-2 md:grid-cols-4 w-full relative gap-20">
         <div className="col-span-1 flex flex-col justify-start items-start gap-4">
-          <Image
-            src="/images/THB.svg"
-            alt="TheHyperbrand Logo"
-            width={160}
-            height={40}
-          />
+          <a href="https://guidekaka.com/one-day-trip-from-bangalore-exciting-destinations/">
+            <Image
+              src="/images/THB.svg"
+              alt="TheHyperbrand Logo"
+              width={160}
+              height={40}
+            />
+          </a>
           <div className="text-sm font-light">
             We create SEO optimized content for your business that will increase
             your search engine rankings and drive more traffic to your website.

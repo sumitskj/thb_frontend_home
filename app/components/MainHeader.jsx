@@ -112,6 +112,15 @@ const MainHeader = () => {
               Blog
             </a>
           </div>
+          <div
+            onClick={() =>
+              sendGAEvent("Blog - header", "Click", "User clicks on Blog")
+            }
+          >
+            <a href="https://services.thehyperbrand.com/performance-marketing" target="_blank">
+              Services
+            </a>
+          </div>
         </div>
       </Drawer>
     );
@@ -184,6 +193,13 @@ const MainHeader = () => {
           >
             <a href="https://blog.thehyperbrand.com/" target="_blank">
               Blog
+            </a>
+          </div>
+          <div
+            className="hidden lg:block font-medium text-sm md:text-base cursor-pointer hover:border-b-2 border-thbYellow"
+          >
+            <a href="https://services.thehyperbrand.com/performance-marketing" target="_blank">
+              Services
             </a>
           </div>
           <button
